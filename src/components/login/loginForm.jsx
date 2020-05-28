@@ -1,6 +1,8 @@
 import React from "react";
 import Form from "../common/form";
 import Joi from "joi-browser";
+import { apiEndPoint } from "../../config.json";
+import http from "../../services/httpService";
 
 class LoginForm extends Form {
   state = {
@@ -14,9 +16,26 @@ class LoginForm extends Form {
     email: Joi.string().required().email().label("Email"),
     password: Joi.string().required().label("Password"),
   };
-  doSubmit = () => {
-    console.log(this.state.data);
-    console.log("Submitted");
+  doSubmit = async () => {
+    const params = { data: this.state.data };
+    try {
+      const { data } = await http.post(
+        apiEndPoint + "/login_validation",
+        params
+      );
+      console.log(data);
+      localStorage.setItem("user_id", data.user_id);
+      localStorage.setItem("batch_id", data.batch_id);
+      localStorage.setItem("fname", data.fname);
+      localStorage.setItem("access", data.access);
+      this.props.onLogin();
+    } catch (error) {
+      if (error.response && error.response.status === 400) {
+        const errors = { ...this.state.errors };
+        errors.email = error.response.data.message;
+        this.setState({ errors });
+      }
+    }
   };
   render() {
     return (

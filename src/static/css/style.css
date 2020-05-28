@@ -1,0 +1,134 @@
+.bg {
+  /* The image used */
+  background-image: url("../img/bg1-min.jpeg");
+  background-repeat: no-repeat;
+  padding:203px 30px;
+
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.shadow {
+  box-shadow: 15px 25px #888888;
+}
+
+.bg-light {
+  background-color: #fff;
+}
+
+.bg-nav {
+  background: #cc2b5e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #753a88,
+    #cc2b5e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #753a88,
+    #cc2b5e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg-pink {
+  background: #ec008c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fc6767,
+    #ec008c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fc6767,
+    #ec008c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg-royal-blue {
+  background: #8e2de2; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg-orange {
+  background: #f7971e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ffd200,
+    #f7971e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ffd200,
+    #f7971e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg-green {
+  background: #00a65a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #00a65a,
+    #00f260
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #00a65a,
+    #00f260
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.bg-grey {
+  background-color: #e2e2e2;
+}
+
+.bg-dark {
+  background-color: #3f3f3f;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.navbar-nav > li {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .desktop {
+    display: none !important;
+  }
+}

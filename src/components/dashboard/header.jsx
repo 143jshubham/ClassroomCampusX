@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="row mb-3" style={{ marginTop: 60 ,paddingTop:20 }}>
+    <div className="row mb-3" style={{ marginTop: 80 }}>
       <div className="col-md-6">
         <h1>Dashboard</h1>
       </div>
