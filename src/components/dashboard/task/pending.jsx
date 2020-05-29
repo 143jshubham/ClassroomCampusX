@@ -2,6 +2,7 @@ import React from 'react'
 
 function pending() {
     return (
+        <div className="card">
             <div className="table-wrapper-scroll-y my-custom-scrollbar">
                 <table className="table table-bordered table-striped mb-0">
                 <tr className="first">
@@ -32,7 +33,7 @@ function pending() {
                
                 </table>
             </div>
-            
+            </div>
         
     )
 }

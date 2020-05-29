@@ -8,7 +8,7 @@ import SideBar from "./sideBar";
   class NavBar extends Component{
 
     state = {
-      isdisplay:false,
+      isdisplay:false
     };
    
     onDrawTogglerClick=(e)=>{

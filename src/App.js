@@ -8,6 +8,9 @@ import Logout from "./components/logout";
 import Dashboard from "./components/dashboard/dashboard";
 import NavigationComponent from "./components/navigation/navigation";
 import MyClass from "./components/my_class/myClass";
+import Profile from './components/profile/profile';
+import TaskDetail from './components/taskDetail/taskDetail'
+import Timeline from './components/timeline/timeline'
 
 class App extends Component {
   // state = {
@@ -57,6 +60,9 @@ class App extends Component {
             <Route path="/logout" component={Logout}></Route>
             <Route path="/my-class" component={MyClass}></Route>
             <Route path="/dashboard" component={Dashboard}></Route>
+            <Route path="/profile" component={Profile}></Route>
+            <Route path="/task" component={TaskDetail}></Route>
+            <Route path="/timeline" component={Timeline}></Route>
             {/* <Route
               path="/"
               exact

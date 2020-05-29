@@ -5,9 +5,11 @@ import Submitted from './task/submitted'
 
 const TaskTables = () => {
   return (
-    <div className="col-12">
+    <div className="col-12 tasktable">
+     <div> <a class="Atitle" style={{color:`#fff`,textAlign:"center"}}>Task  <span>Status</span></a></div>
+     <hr />
       <div className="card text-center">
-        <div className="card-header">
+        <div className="card-header" style={{backgroundColor:`#327697`}}>
           <ul className="nav nav-tabs card-header-tabs id='nav-tab' role='tablist' ">
             <li className="nav-item">
               <a className="nav-link active"
@@ -46,13 +48,13 @@ const TaskTables = () => {
         </div>
         <div className="card-body">
           <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-pending" role="tabpanel" aria-labelledby="nav-pending-tab">
+            <div class="tab-pane fade show active pending" id="nav-pending" role="tabpanel" aria-labelledby="nav-pending-tab">
               <Pending />
             </div>
-            <div class="tab-pane fade" id="nav-evaluated" role="tabpanel" aria-labelledby="nav-evaluated-tab">
+            <div class="tab-pane fade evaluated" id="nav-evaluated" role="tabpanel" aria-labelledby="nav-evaluated-tab">
               <Evaluated />
             </div>
-            <div class="tab-pane fade" id="nav-submitted" role="tabpanel" aria-labelledby="nav-submitted-tab">
+            <div class="tab-pane fade submitted" id="nav-submitted" role="tabpanel" aria-labelledby="nav-submitted-tab">
               <Submitted />
             </div>
           </div>  

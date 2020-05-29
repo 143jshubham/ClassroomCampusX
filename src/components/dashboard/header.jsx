@@ -15,6 +15,7 @@ const Header = () => {
             data-toggle="dropdown"
             aria-haspopup="true"
             aria-expanded="false"
+            style={{padding:`6px`,width:`130px`}}
           >
             Select Month
           </button>

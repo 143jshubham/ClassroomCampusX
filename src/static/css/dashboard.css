@@ -53,22 +53,23 @@ a:focus {
 ----------------------------------------------------- */
 
 #sidebar {
+  display:block;
   width: 250px;
   position: fixed;
   top: 0px;
-  left: -250px;
+  left:0px;
   height: 100vh;
   z-index: 999;
   background: #013220;
   color: #fff;
-  transition: all 0.3s;
+  transition: all 0.9s ease-in-out;
   overflow-y: scroll;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
-#sidebar.active {
+/* #sidebar.active {
   left: 0;
-}
+} */
 
 #dismiss {
   width: 35px;
@@ -82,7 +83,7 @@ a:focus {
   cursor: pointer;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 #dismiss .fas {
   margin-top: 15px;
@@ -93,8 +94,8 @@ a:focus {
   color: #7386d5;
 }
 
-.overlay {
-  display: none;
+/* .overlay {
+  display:block;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -106,7 +107,7 @@ a:focus {
 .overlay.active {
   display: block;
   opacity: 1;
-}
+} */
 
 #sidebar .sidebar-header {
   padding: 20px;
@@ -196,6 +197,99 @@ a.article:hover {
   right: 0;
 }
 
+
+
+
+/* %%%%%%%%%%%%%%% ***************************  DASHBOARD CSS **************************/
+.tasktable hr{
+  width:97.2%;
+  margin-left:0;
+  margin-bottom:2px;
+  margin-top:0;
+  border: 16px solid #327697;
+  border-radius: 15px 15px 0 0 ;
+
+}
+.tasktable .card{
+  box-shadow:0px 0px 4px  rgb(50, 118, 151);
+  border:none;
+}
+.pending .card:before{
+  content: " ";
+	position: absolute;
+	top:-39px;
+	left:6.4%;
+	transform: translate(-40%);
+	border:25px solid;
+	border-color:  #327697 transparent transparent transparent;
+}
+.submitted .card:before{
+  content: " ";
+	position: absolute;
+	top:-39px;
+	left:36%;
+	transform: translate(-40%);
+	border:25px solid;
+	border-color: #327697  transparent transparent  transparent;
+}
+.evaluated .card:before{
+  content: " ";
+	position: absolute;
+	top:-38px;
+	left:21%;
+	transform: translate(-40%);
+	border:25px solid;
+	border-color:  #08652B transparent transparent transparent;
+}
+.tasktable .Atitle ,.leader .Atitle {
+	font-family: arial;
+	text-transform: uppercase;
+	font-size: 20px;
+	width: 420px;
+	height: 45px;
+	border-radius: 30px 30px 30px 30px  ;
+	line-height: 45px;
+	display: block;
+  text-decoration: none;
+  color:#fff;
+	margin:1rem auto;
+	background: linear-gradient(-45deg, #0B8539 0, #08652B 100%);
+	
+}
+.leader a.Article{
+  color: #fff;
+}
+.leader tr:nth-child(even) {
+  background-color:#b3ddf2;
+
+}
+.leader table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background: linear-gradient(-45deg, #327697 0, #ddd 100%);
+  height: 100px;
+
+}
+.leader .leader-hr hr{
+  width:92.8%;
+  margin-left:0;
+  margin-bottom:-5px;
+  margin-top:0;
+  border: 16px solid #327697;
+  border-radius: 15px 15px 0 0 ;
+}
+.leader .my-custom-scrollbar {
+	position: relative;
+	height: 300px;
+	overflow: auto;
+}
+.leader .table-wrapper-scroll-y {
+	display: block;
+}
+.leader .table-wrapper-scroll-y {
+	display: block;
+}
 /* %%%%%%%%%%%%%%%   CREATE FEED CSS **************************/
 
 
@@ -304,7 +398,7 @@ a.article:hover {
   overflow: hidden;
 }
 .feed .card .card-body .gyanplace .createArea button{
- font-family: arial;
+font-family: arial;
 text-transform: uppercase;
 font-size:20px;
 width: 140px;
@@ -320,4 +414,203 @@ margin-top:40px ;
 background: linear-gradient(-45deg, #327697 0, #ed145b 100%);
 
 
+}
+
+/* ******************************************Profile Section Css******* ***************************/
+
+.profilesec .avatar {
+	vertical-align: middle;
+	width:150px;
+	height:150px;
+	border-radius: 50%;
+	margin:10px auto;
+	border:none;
+	box-shadow: 0 8px 5px rgb(138, 137, 137);
+}
+.profilesec .card{
+  margin-top: 50px;
+	width:25rem;
+  border:none;
+  margin-left:20px;
+	border-radius: 15px 15px 0 15px ;
+  box-shadow: 1px 0 4px  rgb(50, 118, 151);
+}
+.profilesec .card-body{
+  padding:0;
+
+}
+.profilesec table {
+margin-top:20px;
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width:100%;
+background: linear-gradient(-45deg, #327697 0, #ddd 100%);
+height:100px;
+margin-left:0;
+
+}
+.profilesec tr {
+   border: 0 solid #dddddd;
+   text-align:left;
+   padding:15px 2px; 
+   overflow-y: auto;
+   height:100%;
+   overflow-x: hidden;
+}
+
+.profilesec th {
+border: 0 solid #dddddd;
+text-align:left;
+padding:15px 8px; 
+
+}
+
+.profilesec th .information{
+  margin-right:0;
+  border:none;
+  
+}
+
+.profilesec tr:nth-child(even) {
+   background-color:#eee;
+
+}
+.profilesec button{
+  font-size:20px;
+  width: 100px;
+  height: 40px;
+  color: #fff;
+  border-radius:80px;
+  line-height:10px;
+  display: block;
+  float: right;
+  margin:20px auto;
+  text-decoration: none;
+  margin-top:40px ;
+}
+
+/* *******Profile EDIT FORM  Section css******* */
+
+.edit-info{
+	margin-top:-538px;
+	margin-left:-20px;
+	display:block;
+  margin-bottom:5px;
+
+
+}
+.edit-info .card{
+	border: none;
+	width:28rem;
+  box-shadow: 0px 4px 4px #4CAF50;
+  display:block;
+  overflow: hidden;
+}
+
+.edit-info .headingpart{
+	text-align: center;
+	color:#fff;
+	padding-top:10px;
+  height:70px;
+  margin-bottom:40px;
+}
+.edit-info .card .headingpart .close{
+	float: right; 
+	color: #fff; 
+	margin-right:20px;
+	cursor: pointer;
+}
+
+.edit-info .input-section input[type="text"]{
+    width:80%;
+    display: block;
+    padding:0px 0px;
+    margin:0px 0px 30px 10px;
+    border-width:0px 0px 3px 0px;
+    outline: none;
+}
+.edit-info .input-section label{
+	font-weight:bold;
+	margin:0px 0px 10px 10px;
+}
+.edit-info .input-section input::placeholder {
+	padding-left:10px;
+	color:#ddd;
+}
+.edit-info .button {
+  border: none;
+  color: white;
+  padding:15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display:inline-block;
+  font-size:14px;
+  float:right;
+  margin:5px 20px 15px 15px;
+}
+.edit-info .my-custom-scrollbar {
+	position: relative;
+	height:600px;
+	overflow: auto;
+}
+.edit-info .table-wrapper-scroll-y {
+	display: block;
+}
+.edit-info .table-wrapper-scroll-y {
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+.userinfo .infopro .card{
+  width:18rem;
+  background-color:#000;
+  border:none;
+	border-radius: 15px 0 0 15px ;
+  box-shadow: -6px 0 rgb(255, 0, 0);
+}
+.userinfo .infopro .rcard{
+	width:18rem;
+  	background-color:#000;
+  	border:none;
+	border-radius: 0 15px 15px 0 ;
+  	box-shadow: 6px 0  rgb(255, 0, 0);
+
+}
+.userinfo .infopro .card-title{
+  color:#000;
+  text-align: center;
+
+}
+.userinfo .infopro a{
+  color:#808080;
+}
+
+.userinfo .infopro .visit{
+	margin:20px auto;
+	border-radius:50%;
+	
+  
+  }
+
+.userinfo .infopro .card:hover{
+	background-color:red;
+	border:none;
+	border-radius: 15px 0 0 15px ;
+	box-shadow: -8px 0  rgb(0, 0, 0);
+  
+  
+  }
+.userinfo .infopro .card:hover .fa{
+	color:#ddd;
+}
+.userinfo .infopro .card:hover a{
+  color:#000;
 }

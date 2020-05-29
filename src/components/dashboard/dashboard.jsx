@@ -37,11 +37,12 @@ class Dashboard extends Component {
             <Card title="Late Submissions" value="544" />
             <Card title="Tasks Won" value="544" />
           </div>
-          <TaskTables />
+          <TaskTables/>
+          
           <div className="row mt-3">
             <div className="col-md-5">
               <Leaderboard />
-            </div>
+            </div> 
             <div className="col-md-7">
               <StudentPerformanceGraph />
             </div>
