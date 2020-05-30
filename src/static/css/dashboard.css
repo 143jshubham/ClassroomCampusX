@@ -202,46 +202,22 @@ a.article:hover {
 
 /* %%%%%%%%%%%%%%% ***************************  DASHBOARD CSS **************************/
 .tasktable hr{
-  width:97.2%;
-  margin-left:0;
+  width:97.4%;
+  margin-left:-2px;
   margin-bottom:2px;
   margin-top:0;
-  border: 16px solid #327697;
+  border: 16px solid #4a8964;
   border-radius: 15px 15px 0 0 ;
 
 }
 .tasktable .card{
-  box-shadow:0px 0px 4px  rgb(50, 118, 151);
-  border:none;
+  margin-top:-7px;
 }
-.pending .card:before{
-  content: " ";
-	position: absolute;
-	top:-39px;
-	left:6.4%;
-	transform: translate(-40%);
-	border:25px solid;
-	border-color:  #327697 transparent transparent transparent;
+.leader .card{
+  margin-left:20px;
 }
-.submitted .card:before{
-  content: " ";
-	position: absolute;
-	top:-39px;
-	left:36%;
-	transform: translate(-40%);
-	border:25px solid;
-	border-color: #327697  transparent transparent  transparent;
-}
-.evaluated .card:before{
-  content: " ";
-	position: absolute;
-	top:-38px;
-	left:21%;
-	transform: translate(-40%);
-	border:25px solid;
-	border-color:  #08652B transparent transparent transparent;
-}
-.tasktable .Atitle ,.leader .Atitle {
+
+.leader .Atitle {
 	font-family: arial;
 	text-transform: uppercase;
 	font-size: 20px;
@@ -253,30 +229,46 @@ a.article:hover {
   text-decoration: none;
   color:#fff;
 	margin:1rem auto;
-	background: linear-gradient(-45deg, #0B8539 0, #08652B 100%);
-	
+
+}
+.tasktable .Atitle {
+	font-family: arial;
+	text-transform: uppercase;
+	font-size: 20px;
+	width: 420px;
+	height: 45px;
+	border-radius: 30px 0px 0px 30px  ;
+	line-height: 45px;
+	display: block;
+  text-decoration: none;
+  color:#fff;
+  margin-left:0px;
+  margin-bottom:20px;
+  margin-top:20px;
+
 }
 .leader a.Article{
   color: #fff;
 }
 .leader tr:nth-child(even) {
-  background-color:#b3ddf2;
+  background-color:#fff;
 
 }
 .leader table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  background: linear-gradient(-45deg, #327697 0, #ddd 100%);
+  background:#ddd;
   height: 100px;
 
 }
 .leader .leader-hr hr{
-  width:92.8%;
+  width:88.4%;
   margin-left:0;
   margin-bottom:-5px;
   margin-top:0;
-  border: 16px solid #327697;
+  margin-left:20px;
+  border: 16px solid #4a8964;
   border-radius: 15px 15px 0 0 ;
 }
 .leader .my-custom-scrollbar {
@@ -309,13 +301,14 @@ a.article:hover {
 }
 /* %%%%%%%%%%%%%%%   Write CSS **************************/
 
-.feed .card .card-body .something form.createArea{
+.feed .card .card-body .post .something form.createArea{
   background-color: #fff;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
   padding: 15px;
   width: 480px;
-  margin: 20px auto;   
+  margin-top:0px;  
+  margin-left:-15px; 
 
 }
 
@@ -332,86 +325,100 @@ a.article:hover {
 }
 
 .feed .card .card-body .something form.createArea button{
-  display:block;
-  width:50px;
-  height:50px;
-  line-height:2px;
-  border: 2px solid #f5f5f5;
-  border-radius: 50%;
-  color:#f5f5f5;
-  text-decoration:none;
-  background: #f5ba13 ;
-  box-shadow: 0 0 3px gray;
-  font-size:50px;
-  font-weight:bold;
-  outline: none;
-  float: right;
-  margin-top: -5px;
-  overflow: hidden;
+  font-family: arial;
 
+  font-size:15px;
+  width: 100px;
+  height: 50px;
+  color: #fff;
+  border-radius:10px;
+  line-height:10px;
+  display: block;
+  float: right;
+  margin-right:-12px;
+  text-decoration: none;
+  margin-top:40px ;
+  margin-bottom: 10px;
 
 }
 
 /* %%%%%%%%%%%%%%%   CREATE GYAN CSS **************************/
 
-.feed .card .card-body .gyanplace form.createArea{
+.feed .card .card-body .gyanplace .card{
   border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
-  padding:10px 0;
+  border: none;
+  padding:15px 2px;
   width:100%;
-  height:200px;
-  margin: 50px auto; 
-  background-color:#eee;
-  margin-top: 10px;  
+  height:220px;
+  margin:0px  auto 50px; 
+ 
 
 }
 .feed .card .card-body .gyanplace form.createArea input
 {
-  width:460px;
+  width:488px;
   height:10px;
   border: none;
   font-size: 20px;
-  margin-left:5px;
-  padding: 30px 10px;
+  margin-left:3px;
+  padding:27px 10px;
   box-shadow: none;
   outline: none;
   overflow: hidden;
   background-color:#fff;
   margin-bottom:5px;
-  border-radius:80px;
+  border-radius:10px;
+  margin-bottom:10px;
+  box-shadow: -2px 0 2px #4CAF50;
 
+}
+.feed .card .card-body .gyanplace form.createArea textarea
+{ 
+  width:488px;
+  border: none;
+  outline: none;
+  border-radius:10px;
+  background-color:#fff;
+  margin-bottom: 10px;
+  box-shadow: -2px 0 2px #4CAF50;
+
+}
+.feed .card .card-body .gyanplace form.createArea textarea::placeholder{
+  padding:12px;
+  font-size:18px;
 }
 .feed .card .card-body .gyanplace form.createArea input::placeholder{
   text-transform: capitalize;
-  padding-left:20px;
-  font-size:15px;
+  padding-left:0px;
+  font-size:18px;
 }
 .feed .card .card-body .gyanplace #inlineFormCustomSelect{
-  width: 100%;
-  height: 60px;
+  width:488px;
+  height: 55px;
   border: none;
   font-size: 20px;
   padding: 0 15px;
   box-shadow: none;
   outline: none;
-  margin-left:0px;
+  margin-left:7px;
   overflow: hidden;
+  border-radius:10px;
+  box-shadow: 0 1px 0  #4CAF50;
 }
 .feed .card .card-body .gyanplace .createArea button{
 font-family: arial;
-text-transform: uppercase;
-font-size:20px;
-width: 140px;
+
+font-size:14px;
+width: 100px;
 height: 50px;
 color: #fff;
-border-radius:80px;
-line-height:50px;
+border-radius:10px;
+line-height:10px;
 display: block;
 float: right;
-margin-right:20px;
+margin-right:10px;
 text-decoration: none;
 margin-top:40px ;
-background: linear-gradient(-45deg, #327697 0, #ed145b 100%);
 
 
 }
@@ -430,10 +437,9 @@ background: linear-gradient(-45deg, #327697 0, #ed145b 100%);
 .profilesec .card{
   margin-top: 50px;
 	width:25rem;
-  border:none;
   margin-left:20px;
 	border-radius: 15px 15px 0 15px ;
-  box-shadow: 1px 0 4px  rgb(50, 118, 151);
+ 
 }
 .profilesec .card-body{
   padding:0;
@@ -444,7 +450,7 @@ margin-top:20px;
 font-family: arial, sans-serif;
 border-collapse: collapse;
 width:100%;
-background: linear-gradient(-45deg, #327697 0, #ddd 100%);
+
 height:100px;
 margin-left:0;
 
@@ -560,37 +566,29 @@ padding:15px 8px;
 	display: block;
 }
 
-
-
-
-
-
-
-
-
+/* *******Profile Links Section css******* */
 
 .userinfo .infopro .card{
   width:18rem;
-  background-color:#000;
   border:none;
-	border-radius: 15px 0 0 15px ;
-  box-shadow: -6px 0 rgb(255, 0, 0);
+	border-radius:15px;
+  
 }
 .userinfo .infopro .rcard{
 	width:18rem;
-  	background-color:#000;
-  	border:none;
-	border-radius: 0 15px 15px 0 ;
-  	box-shadow: 6px 0  rgb(255, 0, 0);
+  border:none;
+	border-radius:15px;
 
 }
 .userinfo .infopro .card-title{
-  color:#000;
+  color:#fff;
   text-align: center;
 
 }
 .userinfo .infopro a{
-  color:#808080;
+  color: #58CB71 ;
+  text-align: center;
+  margin-bottom:10px;
 }
 
 .userinfo .infopro .visit{
@@ -600,17 +598,130 @@ padding:15px 8px;
   
   }
 
+.userinfo .infopro .card .fa{
+	color:#4a8964 ;
+}
 .userinfo .infopro .card:hover{
-	background-color:red;
+	background-color:#4a8964;
 	border:none;
-	border-radius: 15px 0 0 15px ;
-	box-shadow: -8px 0  rgb(0, 0, 0);
+	border-radius: 15px  ;
   
   
   }
 .userinfo .infopro .card:hover .fa{
-	color:#ddd;
+	color:#fff  ;
 }
 .userinfo .infopro .card:hover a{
-  color:#000;
+ 
+  color:#fff  ;
+}
+
+
+/* **************************Error page   Section css******* */
+.error .row{
+  color:#eee;
+  font-family:Corbel,Arial,Helvetica,sans-serif;
+  font-size:13px;
+  
+ 
+}
+.error #boy{
+  margin-top:0px;
+  margin-left:550px;
+  opacity:0.8;
+}
+
+.error hgroup{
+  display: block;
+  margin-top:20px;
+  font-family:'Century Gothic',Calibri,'Myriad Pro',Arial,Helvetica,sans-serif;
+  margin-left:400px;
+}
+
+.error h1{
+  color:#4a8964;
+  font-size:80px;
+  text-shadow:3px 3px 0 #58CB71 ;
+  white-space:nowrap;
+}
+
+.error h2{ 
+  color:#4a8964;
+  font-size:25px;
+  font-weight:normal;
+  padding:5px 0;
+}
+
+
+
+
+
+/* ************************** Work In Progess page css ******* */
+
+.workIn {
+  max-width:100px;
+  margin: 50px auto;
+  
+}
+.workIn hgroup{
+  display: block;
+  margin-top:20px;
+  font-family:'Century Gothic',Calibri,'Myriad Pro',Arial,Helvetica,sans-serif;
+  margin-left:100px;
+}
+
+.workIn h1{
+  color:#4a8964;
+  font-size:80px;
+  text-shadow:3px 3px 0 #58CB71 ;
+  white-space:nowrap;
+}
+.workIn h1 {
+    text-align: center;
+  }
+.workIn .work-progress {
+    position: relative;
+    width: 60%;
+    height: 50px;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-left: 260px;
+    margin-top:40px;
+  }
+.workIn .work-progress .work-complete {
+    position: absolute;
+      left: 0;
+      top: 0px;
+      height: 100%;
+      background-color: #58CB71;
+      border-radius: 10px;
+      animation: g 2500ms infinite ease-in-out;
+      z-index: 2;
+    }
+    .workIn .work-progress .work-complete .fill-liquid {
+        z-index: 1;
+        width: 70px;
+        height: 70px;
+        animation: g 2500ms infinite ease-in-out, r 3000ms infinite cubic-bezier(0.5, 0.5, 0.5, 0.5);
+        position: absolute;
+        right: -5px;
+        top: -10px;
+        background-color: #58CB71;
+        border-radius: 40%;
+      }
+
+
+@keyframes g {
+  0% { background-color: #58CB71; }
+  50% { background-color: #008000 }
+  100% { background-color: #58CB71; }
+}
+
+@keyframes r {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
 }

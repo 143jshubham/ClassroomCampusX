@@ -11,6 +11,8 @@ import MyClass from "./components/my_class/myClass";
 import Profile from './components/profile/profile';
 import TaskDetail from './components/taskDetail/taskDetail'
 import Timeline from './components/timeline/timeline'
+import Error from './components/error/error'
+import Working from './components/error/working'
 
 class App extends Component {
   // state = {
@@ -63,6 +65,9 @@ class App extends Component {
             <Route path="/profile" component={Profile}></Route>
             <Route path="/task" component={TaskDetail}></Route>
             <Route path="/timeline" component={Timeline}></Route>
+            <Route path="/error" component={Error}></Route>
+            <Route path="/working" component={Working}></Route>
+
             {/* <Route
               path="/"
               exact

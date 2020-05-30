@@ -11,12 +11,12 @@ function classmate() {
                                 <div className="float-left">
                                     <h6>Your Classmates</h6>
                                 </div>
-                                <div className="float-right">
-                                    <a href="#" className="pull-left inline-block mr-15">
-                                        <i className="fas fa-arrow-left"></i>
+                                <div className="float-right" style={{marginTop:-6}}>
+                                    <a href="#" className="pull-left inline-block mr-15" style={{marginRight:20}}>
+                                    <i class="fa fa-angle-left fa-2x" aria-hidden="true"></i>
                                     </a>
                                     <a href="#" className="pull-left inline-block close-panel" data-effect="fadeOut">
-                                        <i className="fas fa-arrow-right"></i>
+                                    <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
                                     </a>
                                 </div>
                                 <div className="clearfix"></div>

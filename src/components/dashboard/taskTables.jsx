@@ -6,19 +6,20 @@ import Submitted from './task/submitted'
 const TaskTables = () => {
   return (
     <div className="col-12 tasktable">
-     <div> <a class="Atitle" style={{color:`#fff`,textAlign:"center"}}>Task  <span>Status</span></a></div>
-     <hr />
+     <div> <a className="Atitle bg-primary-3" style={{color:`#fff`,textAlign:"center"}}>Task Status</a></div>
+     <hr/>
       <div className="card text-center">
-        <div className="card-header" style={{backgroundColor:`#327697`}}>
-          <ul className="nav nav-tabs card-header-tabs id='nav-tab' role='tablist' ">
-            <li className="nav-item">
+        <div className="card-header">
+        
+          <ul className="nav nav-tabs card-header-tabs id='nav-tab' role='tablist' " style={{backgroundColor:`#eee`,width:`107%`,marginLeft:`-35px`,border:`none`}}>
+            <li className="nav-item" style={{marginLeft:40}}>
               <a className="nav-link active"
                id="nav-pending-tab" 
                data-toggle="tab"
                 href="#nav-pending" 
                 role="tab" 
                 aria-controls="nav-pending"
-                 aria-selected="true">
+                 aria-selected="true" style={{width:180}}>
                 Pending Tasks
               </a>
             </li>
@@ -29,7 +30,7 @@ const TaskTables = () => {
                href="#nav-evaluated"
                 role="tab" 
                 aria-controls="nav-evaluated"
-                 aria-selected="false">
+                 aria-selected="false"style={{width:180}}>
                 Evaluated Tasks
               </a>
             </li>
@@ -40,7 +41,7 @@ const TaskTables = () => {
                href="#nav-submitted" 
                role="tab"
                 aria-controls="nav-submitted"
-                 aria-selected="false">
+                 aria-selected="false" style={{width:180}}>
                 Submitted Tasks
               </a>
             </li>

@@ -7,28 +7,17 @@ const Header = () => {
         <h1>Dashboard</h1>
       </div>
       <div className="col-md-6">
-        <div className="dropdown float-right">
-          <button
-            className="btn btn-danger btn-sm dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-            style={{padding:`6px`,width:`130px`}}
-          >
-            Select Month
-          </button>
-          <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a className="dropdown-item" href="#">
-              Action
-            </a>
-            <a className="dropdown-item" href="#">
-              Another action
-            </a>
-            <a className="dropdown" href="#">
-              Something else here
-            </a>
+          <div class="dropdown" style={{float:`right`}}>
+            <button class="btn btn-secondary btn-sm btn-danger" type="button" 
+            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+             aria-expanded="false"
+             >
+              Select Month <span style={{marginLeft:`2px`}}><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+            </button>
+           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
           </div>
         </div>
       </div>

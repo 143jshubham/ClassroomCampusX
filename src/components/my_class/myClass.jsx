@@ -33,7 +33,7 @@ class MyClass extends Component {
 
           <div className="col-md-6">
             <div className="row">
-              <div className="col-md-12">
+              <div className="col-md-12 mb-5">
                 <CreateFeed />
               </div>
 

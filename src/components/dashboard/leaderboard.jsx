@@ -3,18 +3,18 @@ import React from "react";
 const Leaderboard = () => {
   return (
     <div className="leader">
-      <div> <a class="Atitle" style={{color:`#fff`,textAlign:"center"}}>Leaderboard</a></div>
+      <div> <a className="Atitle bg-primary-3" style={{color:`#fff`,textAlign:"center"}}>Leaderboard</a></div>
       <div className="leader-hr">
       <hr/>
       <div className="card">
       <div className="table-wrapper-scroll-y my-custom-scrollbar">
       
                   <table className="table table-bordered table-striped mb-0">
-                  <thead style={{backgroundColor:`#327697`}}>
+                  <thead style={{backgroundColor:`#4a8964`}}>
                   <tr className="first">
-                      <th style={{fontSize:20}}>Rank</th>
-                      <th style={{fontSize:20}}>Name</th>
-                      <th style={{fontSize:20}}>Score</th>
+                      <th style={{fontSize:20,color:`#fff`}}>Rank</th>
+                      <th style={{fontSize:20 ,color:`#fff`}}>Name</th>
+                      <th style={{fontSize:20 ,color:`#fff`}}>Score</th>
                   </tr>
                   </thead>
                 
