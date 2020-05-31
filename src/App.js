@@ -13,6 +13,8 @@ import TaskDetail from './components/taskDetail/taskDetail'
 import Timeline from './components/timeline/timeline'
 import Error from './components/error/error'
 import Working from './components/error/working'
+import CourseDashboard from './components/courses/courseDashboard'
+import CourseMenu from './components/courses/courseMenu'
 
 class App extends Component {
   // state = {
@@ -67,6 +69,8 @@ class App extends Component {
             <Route path="/timeline" component={Timeline}></Route>
             <Route path="/error" component={Error}></Route>
             <Route path="/working" component={Working}></Route>
+            <Route path="/coursedash" component={CourseDashboard}></Route>
+            <Route path="/coursemenu" component={CourseMenu}></Route>
 
             {/* <Route
               path="/"
