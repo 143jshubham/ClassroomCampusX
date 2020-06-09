@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
- class aptitude extends Component {
+ class aptitudeForm extends Component {
     render() {
         return (
-            <div className="aptitude-info py-5 " style={{marginTop:50,width:'100%',paddingLeft:'auto',paddingRight:'auto',height:'100%'}}>
+            <div className="aptitude-info py-4 " style={{marginTop:50,width:'100%',paddingLeft:'auto',paddingRight:'auto',height:'100%'}}>
                 
             <h2 className="my-2 text-primary-3">Here is the Description Video....</h2>
             <iframe id="iframe2"
@@ -97,4 +97,4 @@ import React, { Component } from 'react'
         )
     }
 }
-export default aptitude
+export default aptitudeForm

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
-class reading extends Component {
+class readingForm extends Component {
     render() {
         return (
-            <div className="reading-info py-5" style={{marginTop:50,width:'100%',paddingLeft:'auto',paddingRight:'auto',height:'100%'}}>
+            <div className="reading-info py-4" style={{marginTop:50,width:'100%',paddingLeft:'auto',paddingRight:'auto',height:'100%'}}>
                 
             <h2 className="my-4 text-primary-3">Read the Paragraph Carefully....</h2>
                 <p className="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -96,4 +96,4 @@ class reading extends Component {
         )
     }
 }
-export default  reading
+export default  readingForm

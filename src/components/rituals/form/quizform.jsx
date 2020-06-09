@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { auto } from '@popperjs/core'
 
- class quizform extends Component {
+ class quizForm extends Component {
     render() {
         return (
-            <div className="quiz-info py-5" style={{marginTop:50,width:'100%',paddingLeft:'auto',paddingRight:'auto',height:'100%'}}>
+            <div className="quiz-info py-4" style={{marginTop:50,width:'100%',paddingLeft:'auto',paddingRight:'auto',height:'100%'}}>
                 
                     <h2 className="my-4 text-primary-3" style={{marginLeft:30}}>On with the Questions.....</h2>
 
@@ -91,4 +91,4 @@ import { auto } from '@popperjs/core'
         )
     }
 }
-export default quizform
+export default quizForm

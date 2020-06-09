@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
- class puzzle extends Component {
+ class puzzleForm extends Component {
     render() {
         return (
             <div className=" container puzzle-form">
                 
-                <h2 className="my-5 text-primary-3">Read the Paragraph Carefully....</h2>
+                <h2 className="my-4 text-primary-3">Read the Paragraph Carefully....</h2>
                     <p className="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -64,4 +64,4 @@ import React, { Component } from 'react'
         )
     }
 }
-export default puzzle
+export default puzzleForm

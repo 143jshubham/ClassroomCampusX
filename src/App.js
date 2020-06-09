@@ -19,10 +19,10 @@ import Course from "./components/my_courses/course";
 import GuestLogin from "./components/login/guestLogin";
 import NotFound from "./components/common/notFound";
 import Rituals from "./components/rituals/rituals";
-import Quiz from "./components/rituals/form/quizform";
-import Reading from "./components/rituals/form/reading"
-import Aptitude from "./components/rituals/form/aptitude";
-import Puzzle from "./components/rituals/form/puzzle"
+import Quiz from "./components/rituals/form/quizForm";
+import Reading from "./components/rituals/form/readingForm"
+import Aptitude from "./components/rituals/form/aptitudeForm";
+import Puzzle from "./components/rituals/form/puzzleForm"
 
 class App extends Component {
   state = {
