@@ -1,60 +1,88 @@
-import React from 'react'
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {  } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faMedium,
+} from "@fortawesome/free-brands-svg-icons";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+const ProfileLinks = ({ profileInfo }) => {
+  return (
+    <div className="container ">
+      <div className="row infopro">
+        <div className="col-lg-12 col-md-12 col-12"></div>
+        <div className="col-md-6 col-6 mt-5">
+          <div className="card">
+            <div className="visit">
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                className="fa"
+                size="4x"
+                aria-hidden="true"
+              />
+            </div>
 
-function profileLinks() {
-    return (
-        <div className="container infopro">
-        <div className="row">
-        <div className="col-lg-12 col-md-12 col-12">
-             
+            <a href={profileInfo["linkedin"]} target="_blank">
+              {" "}
+              Linkedin profile
+            </a>
+          </div>
         </div>
-        <div className="col-md-6 mt-5">
-            
-            <div className="card">
+        <div className="col-md-6 col-6 mt-5">
+          <div className="card rcard">
             <div className="visit">
-           
-            <i className="fa fa-linkedin fa-4x" aria-hidden="true"></i>
-            </div>
-                
-                <a href="#" > Linkdin profile</a>
+              <FontAwesomeIcon
+                icon={faGithub}
+                className="fa"
+                size="4x"
+                aria-hidden="true"
+              />
             </div>
 
+            <a href={profileInfo["github"]} target="_blank">
+              {" "}
+              Github profile
+            </a>
+          </div>
+        </div>
 
-        </div>
-        <div className="col-md-6 mt-5">
-            <div className="card rcard">
+        <div className="col-md-6 col-6 mt-5">
+          <div className="card ">
             <div className="visit">
-                <i className="fa fa-github fa-4x" aria-hidden="true"></i>
+              <FontAwesomeIcon
+                icon={faMedium}
+                className="fa"
+                color="white"
+                size="4x"
+                aria-hidden="true"
+              />
             </div>
-               
-                <a href="#"> Github profile</a>
-            </div>
-            </div>
-        
-        <div className="col-md-6 mt-5">
-            <div className="card ">
+
+            <a href={profileInfo["medium"]} target="_blank">
+              Medium profile
+            </a>
+          </div>
+        </div>
+        <div className="col-md-6 col-6 mt-5">
+          <div className="card rcard">
             <div className="visit">
-            <i className="fa fa-medium fa-4x" aria-hidden="true"></i>
+              <FontAwesomeIcon
+                icon={faUserCircle}
+                size="4x"
+                className="fa"
+                color="white"
+                aria-hidden="true"
+              />
             </div>
-               
-                <a href="#"  >Medium profile</a>
-            </div>
+            <a href={profileInfo["portfolio"]} target="_blank">
+              {" "}
+              Portfolio profile
+            </a>
+          </div>
         </div>
-        <div className="col-md-6 mt-5">
-            <div className="card rcard">
-            <div className="visit">
-            <i className="fa fa-user-circle-o fa-4x" aria-hidden="true"></i>
-            </div>
-                
-                <a href="#"> Portfolio profile</a>
-            </div>
-        </div>
-        </div>
+      </div>
     </div>
+  );
+};
 
-    
-    )
-}
-
-export default profileLinks
+export default ProfileLinks;

@@ -14,13 +14,13 @@ p {
   font-size: 1.1em;
   font-weight: 300;
   line-height: 1.7em;
-  color: #999;
+  color: #000;
 }
 
 a,
 a:hover,
 a:focus {
-  color: inherit;
+  color: #009b72;
   text-decoration: none;
   transition: all 0.3s;
 }
@@ -53,23 +53,20 @@ a:focus {
 ----------------------------------------------------- */
 
 #sidebar {
-  display:block;
   width: 250px;
   position: fixed;
   top: 0px;
-  left:0px;
   height: 100vh;
   z-index: 999;
   background: #013220;
   color: #fff;
-  transition: all 0.9s ease-in-out;
-  overflow-y: scroll;
+  transition: all 0.3s;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* #sidebar.active {
+#sidebar.active {
   left: 0;
-} */
+}
 
 #dismiss {
   width: 35px;
@@ -83,7 +80,7 @@ a:focus {
   cursor: pointer;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s;
 }
 #dismiss .fas {
   margin-top: 15px;
@@ -94,8 +91,8 @@ a:focus {
   color: #7386d5;
 }
 
-/* .overlay {
-  display:block;
+.overlay {
+  display: none;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -107,15 +104,16 @@ a:focus {
 .overlay.active {
   display: block;
   opacity: 1;
-} */
+}
 
 #sidebar .sidebar-header {
-  padding: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
   color: #fff;
 }
 
 #sidebar ul.components {
-  padding: 20px;
+  padding-left: 20px;
   border-bottom: 1px solid #47748b;
 }
 
@@ -197,123 +195,33 @@ a.article:hover {
   right: 0;
 }
 
-
-
-
-/* %%%%%%%%%%%%%%% ***************************  DASHBOARD CSS **************************/
-.tasktable hr{
-  width:97.4%;
-  margin-left:-2px;
-  margin-bottom:2px;
-  margin-top:0;
-  border: 16px solid #4a8964;
-  border-radius: 15px 15px 0 0 ;
-
-}
-.tasktable .card{
-  margin-top:-7px;
-}
-.leader .card{
-  margin-left:20px;
-}
-
-.leader .Atitle {
-	font-family: arial;
-	text-transform: uppercase;
-	font-size: 20px;
-	width: 420px;
-	height: 45px;
-	border-radius: 30px 30px 30px 30px  ;
-	line-height: 45px;
-	display: block;
-  text-decoration: none;
-  color:#fff;
-	margin:1rem auto;
-
-}
-.tasktable .Atitle {
-	font-family: arial;
-	text-transform: uppercase;
-	font-size: 20px;
-	width: 420px;
-	height: 45px;
-	border-radius: 30px 0px 0px 30px  ;
-	line-height: 45px;
-	display: block;
-  text-decoration: none;
-  color:#fff;
-  margin-left:0px;
-  margin-bottom:20px;
-  margin-top:20px;
-
-}
-.leader a.Article{
-  color: #fff;
-}
-.leader tr:nth-child(even) {
-  background-color:#fff;
-
-}
-.leader table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  background:#ddd;
-  height: 100px;
-
-}
-.leader .leader-hr hr{
-  width:88.4%;
-  margin-left:0;
-  margin-bottom:-5px;
-  margin-top:0;
-  margin-left:20px;
-  border: 16px solid #4a8964;
-  border-radius: 15px 15px 0 0 ;
-}
-.leader .my-custom-scrollbar {
-	position: relative;
-	height: 300px;
-	overflow: auto;
-}
-.leader .table-wrapper-scroll-y {
-	display: block;
-}
-.leader .table-wrapper-scroll-y {
-	display: block;
-}
 /* %%%%%%%%%%%%%%%   CREATE FEED CSS **************************/
 
-
-.feed .card  ul{
-  display:flex;
-  margin-left:-15px;
-  margin-bottom:5px;
-
+.feed .card ul {
+  display: flex;
+  margin-left: -15px;
+  margin-bottom: 5px;
 }
-.feed .card  li{
+.feed .card li {
   list-style: none;
   cursor: pointer;
-  font-size:large;
-  padding:0px 20px;
-  margin-top:20px;
-
+  font-size: large;
+  padding: 0px 20px;
+  margin-top: 20px;
 }
 /* %%%%%%%%%%%%%%%   Write CSS **************************/
 
-.feed .card .card-body .post .something form.createArea{
+.feed .card .card-body .post .something form.createArea {
   background-color: #fff;
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
   padding: 15px;
   width: 480px;
-  margin-top:0px;  
-  margin-left:-15px; 
-
+  margin-top: 0px;
+  margin-left: -15px;
 }
 
-
-.feed .card .card-body .something form.createArea textarea{
+.feed .card .card-body .something form.createArea textarea {
   width: 100%;
   height: 60px;
   border: none;
@@ -324,458 +232,662 @@ a.article:hover {
   overflow: hidden;
 }
 
-.feed .card .card-body .something form.createArea button{
+.feed .card .card-body .something form.createArea button {
   font-family: arial;
 
-  font-size:15px;
+  font-size: 15px;
   width: 100px;
   height: 50px;
   color: #fff;
-  border-radius:10px;
-  line-height:10px;
+  border-radius: 10px;
+  line-height: 10px;
   display: block;
   float: right;
-  margin-right:-12px;
+  margin-right: -12px;
   text-decoration: none;
-  margin-top:40px ;
+  margin-top: 40px;
   margin-bottom: 10px;
-
 }
 
 /* %%%%%%%%%%%%%%%   CREATE GYAN CSS **************************/
 
-.feed .card .card-body .gyanplace .card{
+.feed .card .card-body .gyanplace .card {
   border-radius: 7px;
   border: none;
-  padding:15px 2px;
-  width:100%;
-  height:220px;
-  margin:0px  auto 50px; 
- 
-
+  padding: 2px;
+  width: 100%;
+  height: 150px;
+  margin: 0px auto 50px;
 }
-.feed .card .card-body .gyanplace form.createArea input
-{
-  width:488px;
-  height:10px;
+.feed .card .card-body .gyanplace form.createArea input {
+  width: 488px;
+  height: 10px;
   border: none;
   font-size: 20px;
-  margin-left:3px;
-  padding:27px 10px;
+  margin-left: 3px;
+  padding: 27px 10px;
   box-shadow: none;
   outline: none;
   overflow: hidden;
-  background-color:#fff;
-  margin-bottom:5px;
-  border-radius:10px;
-  margin-bottom:10px;
-  box-shadow: -2px 0 2px #4CAF50;
-
+  background-color: #fff;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: -2px 0 2px #4caf50;
 }
-.feed .card .card-body .gyanplace form.createArea textarea
-{ 
-  width:488px;
+.feed .card .card-body .gyanplace form.createArea textarea {
+  width: 488px;
   border: none;
   outline: none;
-  border-radius:10px;
-  background-color:#fff;
+  border-radius: 10px;
+  background-color: #fff;
   margin-bottom: 10px;
-  box-shadow: -2px 0 2px #4CAF50;
-
+  box-shadow: -2px 0 2px #4caf50;
 }
-.feed .card .card-body .gyanplace form.createArea textarea::placeholder{
-  padding:12px;
-  font-size:18px;
+.feed .card .card-body .gyanplace form.createArea textarea::placeholder {
+  padding: 12px;
+  font-size: 18px;
 }
-.feed .card .card-body .gyanplace form.createArea input::placeholder{
+.feed .card .card-body .gyanplace form.createArea input::placeholder {
   text-transform: capitalize;
-  padding-left:0px;
-  font-size:18px;
+  padding-left: 0px;
+  font-size: 18px;
 }
-.feed .card .card-body .gyanplace #inlineFormCustomSelect{
-  width:488px;
+.feed .card .card-body .gyanplace #inlineFormCustomSelect {
+  width: 488px;
   height: 55px;
   border: none;
   font-size: 20px;
   padding: 0 15px;
   box-shadow: none;
   outline: none;
-  margin-left:7px;
+  margin-left: 7px;
   overflow: hidden;
-  border-radius:10px;
-  box-shadow: 0 1px 0  #4CAF50;
+  border-radius: 10px;
+  box-shadow: 0 1px 0 #4caf50;
 }
-.feed .card .card-body .gyanplace .createArea button{
-font-family: arial;
+.feed .card .card-body .gyanplace .createArea button {
+  font-family: arial;
 
-font-size:14px;
-width: 100px;
-height: 50px;
-color: #fff;
-border-radius:10px;
-line-height:10px;
-display: block;
-float: right;
-margin-right:10px;
-text-decoration: none;
-margin-top:40px ;
-
-
+  font-size: 14px;
+  width: 100px;
+  height: 50px;
+  color: #fff;
+  border-radius: 10px;
+  line-height: 10px;
+  display: block;
+  float: right;
+  margin-right: 10px;
+  text-decoration: none;
+  margin-top: 40px;
 }
 
 /* ******************************************Profile Section Css******* ***************************/
 
 .profilesec .avatar {
-	vertical-align: middle;
-	width:150px;
-	height:150px;
-	border-radius: 50%;
-	margin:10px auto;
-	border:none;
-	box-shadow: 0 8px 5px rgb(138, 137, 137);
+  vertical-align: middle;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 10px auto;
+  border: none;
+  box-shadow: 0 8px 5px rgb(138, 137, 137);
 }
-.profilesec .card{
+.profilesec .card {
   margin-top: 50px;
-	width:25rem;
-  margin-left:20px;
-	border-radius: 15px 15px 0 15px ;
- 
+  margin: 50px auto;
+  border-radius: 15px 15px 0 15px;
 }
-.profilesec .card-body{
-  padding:0;
-
+.profilesec .card-body {
+  padding: 0;
 }
 .profilesec table {
-margin-top:20px;
-font-family: arial, sans-serif;
-border-collapse: collapse;
-width:100%;
+  margin-top: 20px;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 
-height:100px;
-margin-left:0;
-
+  height: 100px;
+  margin-left: 0;
 }
 .profilesec tr {
-   border: 0 solid #dddddd;
-   text-align:left;
-   padding:15px 2px; 
-   overflow-y: auto;
-   height:100%;
-   overflow-x: hidden;
+  border: 0 solid #dddddd;
+  text-align: left;
+  padding: 15px 2px;
+  overflow-y: auto;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .profilesec th {
-border: 0 solid #dddddd;
-text-align:left;
-padding:15px 8px; 
-
+  border: 0 solid #dddddd;
+  text-align: left;
+  padding: 15px 8px;
 }
 
-.profilesec th .information{
-  margin-right:0;
-  border:none;
-  
+.profilesec th .information {
+  margin-right: 0;
+  border: none;
 }
 
 .profilesec tr:nth-child(even) {
-   background-color:#eee;
-
+  background-color: #eee;
 }
-.profilesec button{
-  font-size:20px;
+.profilesec button {
+  font-size: 20px;
   width: 100px;
   height: 40px;
   color: #fff;
-  border-radius:80px;
-  line-height:10px;
+  border-radius: 80px;
+  line-height: 10px;
   display: block;
   float: right;
-  margin:20px auto;
+  margin: 20px auto;
   text-decoration: none;
-  margin-top:40px ;
+  margin-top: 40px;
+}
+.profilevideo .card {
+  height: 400px;
+}
+
+@media (max-width: 480px) {
+  .profilesec .card {
+    width: 20rem;
+    margin: 50px auto;
+    border-radius: 15px 15px 0 15px;
+  }
+  .profilesec th {
+    font-size: 13px;
+    padding: 15px 8px;
+  }
+  .profilevideo .card {
+    height: 200px;
+  }
 }
 
 /* *******Profile EDIT FORM  Section css******* */
 
-.edit-info{
-	margin-top:-538px;
-	margin-left:-20px;
-	display:block;
-  margin-bottom:5px;
-
-
+.edit-info {
+  margin-top: -538px;
+  margin-left: -20px;
+  display: block;
+  margin-bottom: 5px;
 }
-.edit-info .card{
-	border: none;
-	width:28rem;
-  box-shadow: 0px 4px 4px #4CAF50;
-  display:block;
+.edit-info .card {
+  border: none;
+  width: 28rem;
+  box-shadow: 0px 4px 4px #4caf50;
+  display: block;
   overflow: hidden;
 }
 
-.edit-info .headingpart{
-	text-align: center;
-	color:#fff;
-	padding-top:10px;
-  height:70px;
-  margin-bottom:40px;
+.edit-info .headingpart {
+  text-align: center;
+  color: #fff;
+  padding-top: 10px;
+  height: 70px;
+  margin-bottom: 40px;
 }
-.edit-info .card .headingpart .close{
-	float: right; 
-	color: #fff; 
-	margin-right:20px;
-	cursor: pointer;
+.edit-info .card .headingpart .close {
+  float: right;
+  color: #fff;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
-.edit-info .input-section input[type="text"]{
-    width:80%;
-    display: block;
-    padding:0px 0px;
-    margin:0px 0px 30px 10px;
-    border-width:0px 0px 3px 0px;
-    outline: none;
+.edit-info .input-section input[type="text"] {
+  width: 80%;
+  display: block;
+  padding: 0px 0px;
+  margin: 0px 0px 30px 10px;
+  border-width: 0px 0px 3px 0px;
+  outline: none;
 }
-.edit-info .input-section label{
-	font-weight:bold;
-	margin:0px 0px 10px 10px;
+.edit-info .input-section label {
+  font-weight: bold;
+  margin: 0px 0px 10px 10px;
 }
 .edit-info .input-section input::placeholder {
-	padding-left:10px;
-	color:#ddd;
+  padding-left: 10px;
+  color: #ddd;
 }
 .edit-info .button {
   border: none;
   color: white;
-  padding:15px 20px;
+  padding: 15px 20px;
   text-align: center;
   text-decoration: none;
-  display:inline-block;
-  font-size:14px;
-  float:right;
-  margin:5px 20px 15px 15px;
+  display: inline-block;
+  font-size: 14px;
+  float: right;
+  margin: 5px 20px 15px 15px;
 }
 .edit-info .my-custom-scrollbar {
-	position: relative;
-	height:600px;
-	overflow: auto;
+  position: relative;
+  height: 600px;
+  overflow: auto;
 }
 .edit-info .table-wrapper-scroll-y {
-	display: block;
+  display: block;
 }
 .edit-info .table-wrapper-scroll-y {
-	display: block;
+  display: block;
 }
 
 /* *******Profile Links Section css******* */
 
-.userinfo .infopro .card{
-  width:18rem;
-  border:none;
-	border-radius:15px;
-  
+.userinfo .infopro .card {
+  width: 18rem;
+  height: 10rem;
+  border: none;
+  border-radius: 15px;
 }
-.userinfo .infopro .rcard{
-	width:18rem;
-  border:none;
-	border-radius:15px;
-
+.userinfo .infopro .rcard {
+  width: 18rem;
+  border: none;
+  border-radius: 15px;
 }
-.userinfo .infopro .card-title{
-  color:#fff;
+.userinfo .infopro .card-title {
+  color: #fff;
   text-align: center;
-
 }
-.userinfo .infopro a{
-  color: #58CB71 ;
+.userinfo .infopro a {
+  color: #58cb71;
   text-align: center;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
-.userinfo .infopro .visit{
-	margin:20px auto;
-	border-radius:50%;
-	
-  
+.userinfo .infopro .visit {
+  margin: 20px auto;
+  border-radius: 50%;
+}
+
+.userinfo .infopro .card .fa {
+  color: #009b72;
+}
+.userinfo .infopro .card:hover {
+  background-color: #009b72;
+  border: none;
+  border-radius: 15px;
+}
+.userinfo .infopro .card:hover .fa {
+  color: #fff;
+}
+.userinfo .infopro .card:hover a {
+  color: #fff;
+}
+@media (max-width: 480px) {
+  .userinfo .infopro .card {
+    width: 10.2rem;
+    height: 9rem;
+    border: none;
+    border-radius: 15px;
+    margin-left: -8px;
   }
-
-.userinfo .infopro .card .fa{
-	color:#4a8964 ;
 }
-.userinfo .infopro .card:hover{
-	background-color:#4a8964;
-	border:none;
-	border-radius: 15px  ;
-  
-  
-  }
-.userinfo .infopro .card:hover .fa{
-	color:#fff  ;
-}
-.userinfo .infopro .card:hover a{
- 
-  color:#fff  ;
-}
-
 
 /* **************************Error page   Section css******* */
-.error .row{
-  color:#eee;
-  font-family:Corbel,Arial,Helvetica,sans-serif;
-  font-size:13px;
-  
- 
+.error .row {
+  color: #eee;
+  font-family: Corbel, Arial, Helvetica, sans-serif;
+  font-size: 13px;
 }
-.error #boy{
-  margin-top:0px;
-  margin-left:550px;
-  opacity:0.8;
+.error #boy {
+  margin-top: 0px;
+  margin-left: 550px;
+  opacity: 0.8;
 }
 
-.error hgroup{
+.error hgroup {
   display: block;
-  margin-top:20px;
-  font-family:'Century Gothic',Calibri,'Myriad Pro',Arial,Helvetica,sans-serif;
-  margin-left:400px;
+  margin-top: 20px;
+  font-family: "Century Gothic", Calibri, "Myriad Pro", Arial, Helvetica,
+    sans-serif;
+  margin-left: 400px;
 }
 
-.error h1{
-  color:#4a8964;
-  font-size:80px;
-  text-shadow:3px 3px 0 #58CB71 ;
-  white-space:nowrap;
+.error h1 {
+  color: #009b72;
+  font-size: 80px;
+  text-shadow: 3px 3px 0 #58cb71;
+  white-space: nowrap;
 }
 
-.error h2{ 
-  color:#4a8964;
-  font-size:25px;
-  font-weight:normal;
-  padding:5px 0;
+.error h2 {
+  color: #009b72;
+  font-size: 25px;
+  font-weight: normal;
+  padding: 5px 0;
 }
-
-
-
-
 
 /* ************************** Work In Progess page css ******* */
 
 .workIn {
-  max-width:100px;
+  max-width: 100px;
   margin: 50px auto;
-  
 }
-.workIn hgroup{
+.workIn hgroup {
   display: block;
-  margin-top:20px;
-  font-family:'Century Gothic',Calibri,'Myriad Pro',Arial,Helvetica,sans-serif;
-  margin-left:100px;
+  margin-top: 20px;
+  font-family: "Century Gothic", Calibri, "Myriad Pro", Arial, Helvetica,
+    sans-serif;
+  margin-left: 100px;
 }
 
-.workIn h1{
-  color:#4a8964;
-  font-size:80px;
-  text-shadow:3px 3px 0 #58CB71 ;
-  white-space:nowrap;
+.workIn h1 {
+  color: #009b72;
+  font-size: 80px;
+  text-shadow: 3px 3px 0 #58cb71;
+  white-space: nowrap;
 }
 .workIn h1 {
-    text-align: center;
-  }
+  text-align: center;
+}
 .workIn .work-progress {
-    position: relative;
-    width: 60%;
-    height: 50px;
-    border: 1px solid #FFF;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin-left: 260px;
-    margin-top:40px;
-  }
+  position: relative;
+  width: 60%;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: 260px;
+  margin-top: 40px;
+}
 .workIn .work-progress .work-complete {
-    position: absolute;
-      left: 0;
-      top: 0px;
-      height: 100%;
-      background-color: #58CB71;
-      border-radius: 10px;
-      animation: g 2500ms infinite ease-in-out;
-      z-index: 2;
-    }
-    .workIn .work-progress .work-complete .fill-liquid {
-        z-index: 1;
-        width: 70px;
-        height: 70px;
-        animation: g 2500ms infinite ease-in-out, r 3000ms infinite cubic-bezier(0.5, 0.5, 0.5, 0.5);
-        position: absolute;
-        right: -5px;
-        top: -10px;
-        background-color: #58CB71;
-        border-radius: 40%;
-      }
-
-
-@keyframes g {
-  0% { background-color: #58CB71; }
-  50% { background-color: #008000 }
-  100% { background-color: #58CB71; }
+  position: absolute;
+  left: 0;
+  top: 0px;
+  height: 100%;
+  background-color: #58cb71;
+  border-radius: 10px;
+  animation: g 2500ms infinite ease-in-out;
+  z-index: 2;
+}
+.workIn .work-progress .work-complete .fill-liquid {
+  z-index: 1;
+  width: 70px;
+  height: 70px;
+  animation: g 2500ms infinite ease-in-out,
+    r 3000ms infinite cubic-bezier(0.5, 0.5, 0.5, 0.5);
+  position: absolute;
+  right: -5px;
+  top: -10px;
+  background-color: #58cb71;
+  border-radius: 40%;
 }
 
-@keyframes r {
-  from { transform: rotate(0deg); }
-  from { transform: rotate(360deg); }
+/* ************************** COURSE  page css ******* */
+.coursevideo .card {
+  height: 500px;
+}
+.taskvideo .card .card-body{
+  height:500px;
+}
+@media (max-width: 480px) {
+  .coursecard .card {
+    width: 20vh;
+    height: 13vh;
+  }
+  .coursecard .card h5 {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .coursecard .card .playicon {
+    font-size: 30px;
+  }
+  .coursevideo .card {
+    height: 200px;
+  }
+  .taskvideo .card .card-body{
+    height:200px;
+    width:315px;
+    margin-left:-15px;
+  }
+}
+/* ************************** dashboard  page css ******* */
+
+@media (max-width: 480px) {
+  .dashcard .card {
+    width:23vh;
+    height:19vh;
+    margin-left:5px;
+  }
+  .dashcard .card  h5.card-title {
+    font-size:15px;
+  }
+  .dashhead .dropdown {
+    margin-top: -50px;
+  }
+  .studentGraph .card{
+    margin-top:20px;
+    width:21.1rem;
+
+  }
+}
+/* ************************** FEED page css ******* */
+.feedcard .card {
+  width: 40rem;
+  margin-left: -10px;
+}
+.feedgyan .card {
+  width:30rem;
+  margin-left: -20px;
+}
+@media (max-width: 470px) {
+  .feedcard .card {
+    width:20.6rem;
+    margin-left: -10px;
+  }
+  .feedgyan .card {
+    width:19rem;
+  }
 }
 
 
 
+/* **************************Graph page css ******* */
 
-
-/* **************************   COURSES PAGE CSS @@@@@@@@@@@@@@@@@@@@@@@@@@ ******* */
-
-
-/* ******* SIDEMENU BAR css ******* */
-.side-lecture .card{
-  border:blue
+.carousel .carousel-inner .graphcard{
+  height:235px;
+  width:450px;
+  margin-left:0;
+  outline:none;
+  border-width:0px 1px;
+  border-radius:0px;
+}
+.carousel .carousel-inner .card .graph-head{
+  background-color:#4caf50;
+  height:50px;
+  margin-top:-8px;
+}
+.carousel .carousel-inner .card .graph-head h3{
+  text-align:center;
+  padding-top:5px;
+  color:#fff
+}
+.carousel .carousel-inner .card .statcards{
+  margin-top:-5px;
+  background-color:#4caf50;
+  background-size: cover;
+  padding-top:50px;
+  color:#fff
 }
 
-.side-lecture .my-custom-scrollbar {
-	position: relative;
-	height:600px;
-	overflow: auto;
-}
-.side-lecture .table-wrapper-scroll-y {
-	display: block;
-}
-.side-lecture .table-wrapper-scroll-y {
-	display: block;
-}
-
-.coursemenu .card{
-  border-radius:15px;
-  border-color:#58CB71;
-  height:8rem;
-}
-.coursemenu .card hr{
-  width:92%;
-  margin-left:-22px;
-  margin-top:52px;
-  border: 3px solid #4a8964;
+@media (max-width: 480px) {
+  .carousel .carousel-inner .graphcard{
+    height:245px;
+    width:350px;
+    margin-left:0;
+    border-radius:0
+  }
+  .carousel .carousel-inner .card .graph-head{
+    background-color:#4caf50;
+    height:50px;
+    margin-top:-8px;
+    color: #ddd;
+  }
+  
 
 }
+/* **************************Rituals page css ******* */
+.ritual .maincard{
+  margin-left:55px;
+}
+.ritual .card .row .upcard{
+  margin-left:23px;
+  margin-top:19px;
+  margin-bottom: 19px;
+}
+.ritual .card .row .lowcard{
+  margin-left:-32px;
+  margin-top:19px;
+  margin-bottom: 19px;
+}
+.aptitude .card{
+  width:105%;
+}
+.quiz .card,.puzzle .card,.code .card,.reading .card,.aptitude .card{
+  height:18rem;
+  text-align: center;
+}
+.quiz .card h1,.puzzle .card h1,.reading .card h1,.aptitude .card h1{
+  margin-top:20%;
+ }
+ .code .card h1{
+   margin-top:10%;
+ }
+@media (max-width: 480px){
+  .ritual .maincard{
+    margin-left:0px;
+  }
+  .quiz .card,.puzzle .card,.code .card,.reading .card,.aptitude .card{
+    height:6rem;
+  }
+  .quiz .card h1,.puzzle .card h1,.reading .card h1,.aptitude .card h1{
+   font-size:18px;
+   margin-top:40%;
+  }
+  .code .card h1{
+    margin-top:16%;
+  }
+  .aptitude .card{
+    width:126%;
+  }
+}
+/* **************************Quiz form  page css ******* */
+.quiz-info .quiz-form{
+  margin-left:30px;
+  margin-right:auto;
+   margin-top:30px
+}
+.quiz-info form .rside{
+  margin-right:1000px;
+}
+@media (max-width: 780px){
+  .quiz-info form .rside{
+    margin-right:300px;
+  }
+}
+@media (max-width: 480px){
+  .quiz-info form .rside{
+    margin-right:30px;
+  }
+  .quiz-info .quiz-form{
+    margin-left:10px;
+    margin-right:auto;
+     margin-top:30px
+  }
+}
+/* **************************Reading form  page css ******* */
+.reading-info .quiz-form{
+  margin-left:30px;
+  margin-right:auto;
+   margin-top:30px
+}
+.reading-info .quiz-form  span{
+  margin-right:5px;
+}
+.reading-info form .rside{
+  margin-right:1000px;
+}
+.reading-info p.para{
+  margin-left:30px;
+  margin-top:30px;
+}
 
-.coursemenu .card img{
-  display: inline;
-  border-radius:15px 0px 0px 15px;
-  margin-left:0px;
+.reading-info h2{
+  margin-left:30px;
 }
-.coursemenu .card  .fa-play-circle{
-  margin-top:-80px;
-  margin-left:40px;
-  color:#fff;
-  size:105px;
+@media (max-width: 480px){
+  .reading-info p.para{
+    margin-left:10px;
+    margin-top:20px;
+  }
+  .reading-info form .rside{
+    margin-right:30px;
+  }
+  .reading-info .quiz-form{
+    margin-left:10px;
+    margin-right:auto;
+     margin-top:30px
+  }
+  .reading-info h2{
+    font-size:22px;
+    margin-left: 10px;
+  }
 }
-.coursemenu .card .card-body{
-  margin-top:-110px;
-  margin-left:110px;
-  width:80%;
+/* ************************** Aptitude form  page css ******* */
+.aptitude-info .quiz-form{
+  margin-left:30px;
+  margin-right:auto;
+   margin-top:30px
+}
+.aptitude-info form .rside{
+  margin-right:1000px;
+}
+.aptitude-info h2{
+  margin-left:30px;
+}
+.aptitude-info #iframe2{
+  margin-left:30px;
+  margin-top:20px;
+  width:700px;
+  height:400px;
+}
+@media (max-width: 480px){
+  
+  .aptitude-info form .rside{
+    margin-right:30px;
+  }
+  .aptitude-info .quiz-form{
+    margin-left:10px;
+    margin-right:auto;
+     margin-top:30px
+  }
+  .aptitude-info h2{
+    font-size:22px;
+    margin-left: 10px;
+  }
+  .aptitude-info #iframe2{
+    margin-left:30px;
+    margin-top:20px;
+    width:300px;
+    height:200px;
+  }
+}
+
+
+.puzzle-form{
+  margin-top:100px;
+  margin-left: 30px;
+  width: 100%;
+}
+@media (max-width: 480px){
+  .puzzle-form{
+    margin-top:100px;
+    margin-left:10px;
+  }
 }

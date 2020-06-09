@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ title, value }) => {
   return (
-    <div className="col-md-3 col-xs-4">
+    <div className="col-md-3 col-6 dashcard">
       <div className="card mb-3">
         <div className="card-body">
           <h5 className="card-title">

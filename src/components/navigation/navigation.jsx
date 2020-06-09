@@ -14,19 +14,15 @@ import SideBar from "./sideBar";
 // export default Navigation;
 
 class Navigation extends Component {
-  state={}
+  state = {};
   render() {
-    // const { onDrawTogglerClick, sideDrawerOpen } = this.props;
-    // console.log("Inside Navigation Compoenent", sideDrawerOpen);
-    // const renderDrawer = () => {
-    //   if (sideDrawerOpen) {
-    //     return <SideBar />;
-    //   }
-    // };
+    const { onDrawTogglerClick, sideDrawerOpen } = this.props;
     return (
       <div className="wrapper">
-        {/* {<NavBar onDrawTogglerClick={onDrawTogglerClick} /> } */}
-       
+        <NavBar onDrawTogglerClick={onDrawTogglerClick} />
+        {sideDrawerOpen ? (
+          <SideBar onDrawTogglerClick={onDrawTogglerClick} />
+        ) : null}
       </div>
     );
   }

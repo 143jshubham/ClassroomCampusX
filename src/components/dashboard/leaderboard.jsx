@@ -1,64 +1,32 @@
 import React from "react";
 
-const Leaderboard = () => {
+const Leaderboard = ({ leaderBoardList }) => {
   return (
-    <div className="leader">
-      <div> <a className="Atitle bg-primary-3" style={{color:`#fff`,textAlign:"center"}}>Leaderboard</a></div>
-      <div className="leader-hr">
-      <hr/>
-      <div className="card">
-      <div className="table-wrapper-scroll-y my-custom-scrollbar">
-      
-                  <table className="table table-bordered table-striped mb-0">
-                  <thead style={{backgroundColor:`#4a8964`}}>
-                  <tr className="first">
-                      <th style={{fontSize:20,color:`#fff`}}>Rank</th>
-                      <th style={{fontSize:20 ,color:`#fff`}}>Name</th>
-                      <th style={{fontSize:20 ,color:`#fff`}}>Score</th>
+    <div className="card">
+      <div className="card-body">
+        <h5 className="card-title">Leaderboard</h5>
+        <div style={{ height: 300, overflowY: "scroll" }}>
+          <table className="table">
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              {leaderBoardList.map((user) => {
+                return (
+                  <tr key={user[0]}>
+                    <td>{user[0]}</td>
+                    <td>{user[1]}</td>
+                    <td>{user[2]}</td>
                   </tr>
-                  </thead>
-                
-                  <tr>
-                      <td>01</td>
-                      <td><a>Nitish</a></td>
-                      <td><a>160</a></td>
-                    
-                  </tr>
-                  <tr>
-                      <td>02</td>
-                      <td>Sutirthasaha</td>
-                      <td><a>140</a></td>   
-                  </tr>
-                  <tr>
-                      <td>03</td>
-                      <td>Katrina</td>
-                      <td><a>135</a></td>   
-                  </tr>
-                  <tr>
-                      <td><a>04</a></td>
-                      <td>Akash</td>
-                      <td><a>130</a></td>
-                  </tr>
-                  <tr>
-                      <td>05</td>
-                      <td>Rahul</td>
-                      <td><a>120</a></td>
-                  </tr>
-                  <tr>
-                      <td>06</td>
-                      <td>Shubham</td>
-                      <td><a>110</a></td>
-                  </tr>
-                  <tr>
-                      <td>05</td>
-                      <td>Suman</td>
-                      <td><a>110</a></td>
-                  </tr>
-              
-                  </table>
-              </div>
-              </div>
-              
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

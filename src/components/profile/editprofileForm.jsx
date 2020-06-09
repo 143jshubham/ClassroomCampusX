@@ -1,55 +1,120 @@
-import React from 'react'
+import React, { Component } from "react";
+import Form from "../common/form";
+import Modal from "react-bootstrap/Modal";
+import Joi from "joi-browser";
+import { apiEndPoint } from "../../config.json";
+import http from "../../services/httpService";
+import { toast } from "react-toastify";
 
-function editprofileForm(props) {
-    function handleClick(e){
-        props.handleClose()
-    }
+class EditProfileForm extends Form {
+  state = {
+    data: {
+      first_name: "",
+      last_name: "",
+      college: "",
+      branch: "",
+      passing_year: "",
+      phone: "",
+      youtube: "",
+      github: "",
+      medium: "",
+      linkedin: "",
+      portfolio: "",
+    },
+    errors: {},
+  };
+  componentDidMount() {
+    const { profileInfo } = this.props;
+    const {
+      first_name,
+      last_name,
+      college,
+      phone,
+      branch,
+      passing_year,
+      youtube,
+      github,
+      medium,
+      linkedin,
+      portfolio,
+    } = profileInfo;
+    const data = {
+      first_name: first_name,
+      last_name: last_name,
+      college: college,
+      branch: branch,
+      passing_year: passing_year,
+      youtube: youtube,
+      github: github,
+      medium: medium,
+      linkedin: linkedin,
+      portfolio: portfolio,
+    };
+    this.setState({ data });
+  }
+  schema = {
+    first_name: Joi.string().required(),
+    last_name: Joi.string().required(),
+    college: Joi.string().required(),
+    branch: Joi.string().required(),
+    passing_year: Joi.number(),
+    phone: Joi.string().min(10).max(10),
+    youtube: Joi.string().uri().allow(""),
+    github: Joi.string().uri().allow(""),
+    medium: Joi.string().uri().allow(""),
+    linkedin: Joi.string().uri().allow(""),
+    portfolio: Joi.string().uri().allow(""),
+  };
+  doSubmit = async () => {
+    const userId = localStorage.getItem("user_id");
+    const access = localStorage.getItem("access");
+    let { data } = this.state;
+    data = { ...data, user_id: userId, access: access };
+    console.log(data);
+    const params = {
+      data,
+    };
+    const { data: result } = await http.post(
+      apiEndPoint + "/update_user",
+      params
+    );
+    toast.success(result.message);
+    this.props.handleClose();
+  };
+  render() {
+    const { show, handleClose } = this.props;
+    const { profileInfo } = this.props;
+
     return (
-        <div className="edit-info">
-        <div className="dropdown">
-            <div className="card">
-                <div className="headingpart badge-primary">
-                    <div className="close" onClick={handleClick}>x</div>
-                    <h2 style={{color:`#fff`}}>Update Your Detail</h2>	
-                </div>
-                <div className="table-wrapper-scroll-y my-custom-scrollbar">
-                <div className="form-item">
-                <form method="Post" action="/sample">
-                    <div className="input-section" method="Post">
-                        <label>First Name:-</label>
-                        <input type="text" name="skill-inp"  placeholder="ex-shubham" />
-                        <label>Last Name:-</label>
-                        <input type="text" name="skill-inp"  placeholder="ex-Raj" />
-                        <label>College:-</label>
-                        <input type="text" name="skill-inp"  placeholder="ex-IIT Delhi" />
-                        <label>Branch:-</label>
-                        <input type="text" name="skill-inp"  placeholder="ex-Information Technology" />
-                        <label>Passing Year:-</label>
-                        <input type="text" name="skill-inp"  placeholder="ex-2022" />
-                        <label>Resume Video:-</label>
-                        <input type="text" name="skill-inp"  placeholder="http://youtube.com" />
-                        <label>Blog Link:-</label>
-                        <input type="text" name="skill-inp"  placeholder="http://myblog.com" />
-                        <label>Github profile:-</label>
-                        <input type="text" name="skill-inp"  placeholder="htt://github.com/my_profile"/>
-                        <label>Linkdin Profile:-</label>
-                        <input type="text" name="skill-inp"  placeholder="http://linkdin.com/my-profile"/>
-                        <label>portfolio Link:-</label>
-                        <input type="text" name="skill-inp"  placeholder="http://myportfolio.com"/>
-                        <div className="but">
-                            <button type="submit" className="button badge-primary">Update</button>
-                        </div>
-                    </div>
-                
-                </form>
-                </div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Edit Profile</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <form onSubmit={this.handleSubmit}>
+            <div class="form-group">
+              {this.renderInput("first_name", "First Name")}
+              {this.renderInput("last_name", "Last Name")}
+              {this.renderInput("college", "College")}
+              {this.renderSelect("branch", "Branch", profileInfo.branches)}
+              {this.renderSelect(
+                "passing_year",
+                "Passing Year",
+                profileInfo.years
+              )}
+              {this.renderInput("phone", "Phone")}
+              {this.renderInput("youtube", "Video Resume")}
+              {this.renderInput("github", "Github")}
+              {this.renderInput("medium", "Medium")}
+              {this.renderInput("linkedin", "Linekdin")}
+              {this.renderInput("portfolio", "Portfolio")}
+              {this.renderButton("Submit")}
             </div>
-            </div>
-    
-    
-        </div>
-    </div>
-    )
+          </form>
+        </Modal.Body>
+      </Modal>
+    );
+  }
 }
 
-export default editprofileForm
+export default EditProfileForm;

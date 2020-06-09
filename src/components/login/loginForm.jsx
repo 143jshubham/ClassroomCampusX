@@ -23,7 +23,6 @@ class LoginForm extends Form {
         apiEndPoint + "/login_validation",
         params
       );
-      console.log(data);
       localStorage.setItem("user_id", data.user_id);
       localStorage.setItem("batch_id", data.batch_id);
       localStorage.setItem("fname", data.fname);

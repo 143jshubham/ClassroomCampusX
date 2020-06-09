@@ -1,3 +1,5 @@
 {
-  "apiEndPoint": "http://127.0.0.1:5001/classroom"
+  "apiEndPointD": "http://127.0.0.1:5000/classroom",
+  "apiEndPoint": "http://www.campusx.in/classroom",
+  "apiEndPointT": "http://campusx-env-1.dyycmfykek.us-east-2.elasticbeanstalk.com/classroom"
 }

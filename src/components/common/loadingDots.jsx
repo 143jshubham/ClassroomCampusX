@@ -8,11 +8,13 @@ const BounceAnimation = keyframes`
 
 const DotWrapper = styled.div`
   display: flex;
-  align-items: flex-end;
+  height:10em;
+  align-items:center;
+  justify-content:center;
 `;
 
 const Dot = styled.div`
-  background-color: black;
+  background-color:black;
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -25,6 +27,7 @@ class LoadingDots extends Component {
   render() {
     return (
       <DotWrapper>
+      <h1 >Loading</h1>
         <Dot delay="0s" />
         <Dot delay=".1s" />
         <Dot delay=".2s" />
