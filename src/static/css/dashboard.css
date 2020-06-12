@@ -891,3 +891,21 @@ a.article:hover {
     margin-left:10px;
   }
 }
+/* ******* Eventdetails css ******* */
+.eventhead h6.duration{
+  margin-left:50px;
+  margin-top:40px;
+}
+@media (max-width:480px){
+  .eventhead h6.duration{
+    
+    margin-top:20px;
+  }
+  .eventhead span.time{
+    margin-top:80px;
+    margin-left:70px;
+  }
+  .eventhead .inside{
+    margin-top: 40px;
+  }
+}
